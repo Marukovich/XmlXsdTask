@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<devices xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns="http://www.pc.by/shop/devices"
+             xsi:schemaLocation="http://www.pc.by/shop/devices devices.xsd">
+    <graphic-card device-id="gc100" title="graphic card">
+        <name>RTX3070Ti</name>
+        <origin>Taiwan</origin>
+        <price>1999.99</price>
+        <type>
+            <is-periphery>yes</is-periphery>
+            <energy-consumption>450</energy-consumption>
+            <numbers-of-coolers>2</numbers-of-coolers>
+            <component-group>periphery</component-group>
+            <ports>displayport,hdmi</ports>
+        </type>
+        <critical>no</critical>
+    </graphic-card>
+
+    <central-processor device-id="cp005" title="central processor">
+        <name>i7 11900K</name>
+        <origin>USA</origin>
+        <price>979.99</price>
+        <type>
+            <is-periphery>no</is-periphery>
+            <energy-consumption>170</energy-consumption>
+            <numbers-of-coolers>0</numbers-of-coolers>
+            <component-group>internal</component-group>
+            <ports>none</ports>
+        </type>
+        <critical>yes</critical>
+    </central-processor>
+
+    <power-unit device-id="pu025" title="power unit">
+        <name>SSR-750FX</name>
+        <origin>Taiwan</origin>
+        <price>425.99</price>
+        <type>
+            <is-periphery>no</is-periphery>
+            <energy-consumption>750</energy-consumption>
+            <numbers-of-coolers>1</numbers-of-coolers>
+            <component-group>internal</component-group>
+            <ports>power connector</ports>
+        </type>
+        <critical>yes</critical>
+    </power-unit>
+</devices>

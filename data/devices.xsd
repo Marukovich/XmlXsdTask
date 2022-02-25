@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        
+        targetNamespace="http://www.pc.by/shop/devices"
+        xmlns:tns="http://www.pc.by/shop/devices"
+        elementFormDefault="qualified">
+    
+    <element name="devices">
+        <complexType>
+            <sequence>
+                <element ref="tns:device" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="device" type="tns:Device" abstract="true"/>
+    <element name="graphic-card" type="tns:Graphic-card" substitutionGroup="tns:device"/>
+    <element name="central-processor" type="tns:Central-processor" substitutionGroup="tns:device"/>
+    <element name="power-unit" type="tns:Power-unit" substitutionGroup="tns:device"/>
+    <complexType name="Device">
+        <sequence>
+            <element name="name" type="string"/>
+            <element name="origin" type="string"/>
+            <element name="price" type="decimal"/>
+            <element name="type" type="tns:Type"/>
+            <element name="critical" type="string"/>
+        </sequence>
+        <attribute name="device-id" type="tns:device-id" use="required"/>
+        <attribute name="title" type="string" use="required"/>
+    </complexType>
+    <complexType name="Graphic-card">
+        <complexContent>
+            <extension base="tns:Device"/>
+        </complexContent>
+    </complexType>
+    <complexType name="Central-processor">
+        <complexContent>
+            <extension base="tns:Device"/>
+        </complexContent>
+    </complexType>
+    <complexType name="Power-unit">
+        <complexContent>
+            <extension base="tns:Device"/>
+        </complexContent>
+    </complexType>
+    <simpleType name="device-id">
+        <restriction base="ID">
+            <pattern value="\w{2}\d{2,5}"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="price">
+        <restriction base="decimal">
+            <minInclusive value="10"/>
+            <maxInclusive value="2500"/>
+        </restriction>
+    </simpleType>
+    <complexType name="Type">
+        <sequence>
+            <element name="is-periphery" type="string"/>
+            <element name="energy-consumption" type="int"/>
+            <element name="numbers-of-coolers" type="int"/>
+            <element name="component-group" type="string"/>
+            <element name="ports" type="string"/>
+        </sequence>
+    </complexType>
+</schema>
