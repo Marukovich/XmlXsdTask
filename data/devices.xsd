@@ -16,7 +16,6 @@
     <element name="device" type="tns:Device" abstract="true"/>
     <element name="graphic-card" type="tns:Graphic-card" substitutionGroup="tns:device"/>
     <element name="central-processor" type="tns:Central-processor" substitutionGroup="tns:device"/>
-    <element name="power-unit" type="tns:Power-unit" substitutionGroup="tns:device"/>
     <complexType name="Device">
         <sequence>
             <element name="name" type="string"/>
@@ -34,11 +33,6 @@
         </complexContent>
     </complexType>
     <complexType name="Central-processor">
-        <complexContent>
-            <extension base="tns:Device"/>
-        </complexContent>
-    </complexType>
-    <complexType name="Power-unit">
         <complexContent>
             <extension base="tns:Device"/>
         </complexContent>

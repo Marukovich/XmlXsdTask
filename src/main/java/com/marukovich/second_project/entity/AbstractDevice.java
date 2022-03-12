@@ -79,24 +79,24 @@ public abstract class AbstractDevice {
 
         AbstractDevice that = (AbstractDevice) o;
 
-        if (deviceId != null ? !deviceId.equals(that.deviceId) : that.deviceId != null) return false;
-        if (title != null ? !title.equals(that.title) : that.title != null) return false;
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
-        if (origin != null ? !origin.equals(that.origin) : that.origin != null) return false;
-        if (price != null ? !price.equals(that.price) : that.price != null) return false;
-        if (critical != null ? !critical.equals(that.critical) : that.critical != null) return false;
-        return type != null ? type.equals(that.type) : that.type == null;
+        if (!deviceId.equals(that.deviceId)) return false;
+        if (!title.equals(that.title)) return false;
+        if (!name.equals(that.name)) return false;
+        if (!origin.equals(that.origin)) return false;
+        if (!price.equals(that.price)) return false;
+        if (!critical.equals(that.critical)) return false;
+        return type.equals(that.type);
     }
 
     @Override
     public int hashCode() {
-        int result = deviceId != null ? deviceId.hashCode() : 0;
-        result = 31 * result + (title != null ? title.hashCode() : 0);
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (origin != null ? origin.hashCode() : 0);
-        result = 31 * result + (price != null ? price.hashCode() : 0);
-        result = 31 * result + (critical != null ? critical.hashCode() : 0);
-        result = 31 * result + (type != null ? type.hashCode() : 0);
+        int result = deviceId.hashCode();
+        result = 31 * result + title.hashCode();
+        result = 31 * result + name.hashCode();
+        result = 31 * result + origin.hashCode();
+        result = 31 * result + price.hashCode();
+        result = 31 * result + critical.hashCode();
+        result = 31 * result + type.hashCode();
         return result;
     }
 

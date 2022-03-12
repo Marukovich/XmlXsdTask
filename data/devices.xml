@@ -24,23 +24,9 @@
             <is-periphery>no</is-periphery>
             <energy-consumption>170</energy-consumption>
             <numbers-of-coolers>0</numbers-of-coolers>
-            <component-group>internal</component-group>
+            <component-group>main</component-group>
             <ports>none</ports>
         </type>
         <critical>yes</critical>
     </central-processor>
-
-    <power-unit device-id="pu025" title="power unit">
-        <name>SSR-750FX</name>
-        <origin>Taiwan</origin>
-        <price>425.99</price>
-        <type>
-            <is-periphery>no</is-periphery>
-            <energy-consumption>750</energy-consumption>
-            <numbers-of-coolers>1</numbers-of-coolers>
-            <component-group>internal</component-group>
-            <ports>power connector</ports>
-        </type>
-        <critical>yes</critical>
-    </power-unit>
 </devices>

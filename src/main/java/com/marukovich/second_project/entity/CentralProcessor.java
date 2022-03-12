@@ -1,10 +1,10 @@
 package com.marukovich.second_project.entity;
 
-public class centralProcessor extends AbstractDevice{
+public class CentralProcessor extends AbstractDevice{
 
     private String centralProcessorParameters;
 
-    public centralProcessor(){}
+    public CentralProcessor(){}
 
     public String getCentralProcessorParameters() {
         return centralProcessorParameters;
@@ -20,7 +20,7 @@ public class centralProcessor extends AbstractDevice{
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
 
-        centralProcessor that = (centralProcessor) o;
+        CentralProcessor that = (CentralProcessor) o;
 
         return centralProcessorParameters.equals(that.centralProcessorParameters);
     }

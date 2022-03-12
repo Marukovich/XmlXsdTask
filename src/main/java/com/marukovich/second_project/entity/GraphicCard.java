@@ -1,9 +1,9 @@
 package com.marukovich.second_project.entity;
 
-public class graphicCard extends AbstractDevice{
+public class GraphicCard extends AbstractDevice{
     private String graphicCardParameters;
 
-    public graphicCard(){}
+    public GraphicCard(){}
 
     public String getGraphicCardParameters() {
         return graphicCardParameters;
@@ -19,7 +19,7 @@ public class graphicCard extends AbstractDevice{
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
 
-        graphicCard that = (graphicCard) o;
+        GraphicCard that = (GraphicCard) o;
 
         return graphicCardParameters.equals(that.graphicCardParameters);
     }
